@@ -1,6 +1,6 @@
 # VoiceAgentOS - Multi-Agent Voice Intelligence Platform
 
-A production-ready, LangGraph-powered voice automation system that processes audio through intelligent agent workflows.
+A production-ready, LangGraph and Langchain-powered voice automation system that processes audio through intelligent agent workflows.
 
 ## 🚀 Quick Start (30-minute deployment)
 
