@@ -2,11 +2,11 @@
 
 A production-ready, LangGraph and Langchain-powered voice automation system that processes audio through intelligent agent workflows.
 
-## 🚀 Quick Start (30-minute deployment)
+##  Quick Start (30-minute deployment)
 
 ### 1. Clone and Setup
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Arnav-12/Voice-OS.git
 cd voiceagent-os
 cp .env.example .env
 # Edit .env with your OpenAI API key
@@ -50,7 +50,7 @@ railway up
 4. Set start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 5. Add environment variable: `GROQ_API_KEY`
 
-## 🧪 Testing the API
+##  Testing the API
 
 ### Upload and Process Audio
 ```bash
@@ -69,7 +69,7 @@ curl "http://localhost:8000/job-status/{job_id}"
 curl "http://localhost:8000/download-audio/{job_id}" -o response.mp3
 ```
 
-## 🏗️ Architecture
+##  Architecture
 
 The system uses LangGraph to orchestrate multiple AI agents:
 
@@ -79,7 +79,7 @@ The system uses LangGraph to orchestrate multiple AI agents:
 4. **Processing Agents** - Summary/Q&A/Action Items
 5. **TTS Agent** - Converts response to speech
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 - `GROQ_API_KEY` - Your GROQ API key
@@ -91,13 +91,13 @@ The system uses LangGraph to orchestrate multiple AI agents:
 - `qa` - Answer questions about content
 - `action_items` - Extract actionable tasks
 
-## 📊 Monitoring
+##  Monitoring
 
 - Health check: `GET /health`
 - API docs: `http://localhost:8000/docs`
 - Logs: `docker-compose logs -f voiceagent-api`
 
-## 🚀 Production Considerations
+##  Production Considerations
 
 1. **Scaling**: Use Redis for job queuing
 2. **Storage**: Replace temp files with cloud storage
@@ -105,7 +105,7 @@ The system uses LangGraph to orchestrate multiple AI agents:
 4. **Monitoring**: Add Prometheus metrics
 5. **Rate Limiting**: Add request throttling
 
-## 🔄 Extending the System
+##  Extending the System
 
 ### Add New Agent
 ```python
@@ -120,7 +120,7 @@ workflow.add_node("my_agent", my_custom_agent)
 ### Custom Task Types
 Add new enum values to `TaskType` in `schemas.py` and corresponding logic in `task_router_agent`.
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 1. **Missing OpenAI Key**: Ensure `GROQ_API_KEY` is set
@@ -136,7 +136,7 @@ LOG_LEVEL=DEBUG uvicorn app.main:app --reload
 This system is production-ready and can handle real-world voice processing workloads!
 ```
 
-## 🚀 30-Minute Deployment Guide
+##  30-Minute Deployment Guide
 
 ### Option 1: Local Development (5 minutes)
 ```bash
@@ -178,7 +178,7 @@ railway up
 # GROQ_API_KEY=your-key-here
 ```
 
-## 🧪 Test the System
+##  Test the System
 
 Upload an audio file and get intelligent responses:
 
